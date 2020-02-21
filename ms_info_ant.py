@@ -14,7 +14,7 @@ import cartopy.crs as ccrs
 from astropy.time import Time
 
 parser = argparse.ArgumentParser(description='Quick look at a Measurement Set, Plot of antenna positions, return the antenna positions in degrees (Lon, Lat)', epilog="Output:list info of MS and plot antenna positions, and return the antenna positions in degrees (Lon, Lat)", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("MS_file")#, type=argparse.FileType('rb'), help='input MeasurmentSet file')
+parser.add_argument("MS_file", help='input MeasurmentSet file')
 
 args = parser.parse_args()
 parser.print_help()
@@ -70,6 +70,11 @@ antpos = anttab.getcol('POSITION')
 antnames = anttab.getcol('NAME')
 anttab.done()
 
+poltab = table(myms+'/POLARIZATION',ack=False)
+num_corr = poltab.getcol('NUM_CORR')
+poltab.done()
+
+
 maintab = table(myms,ack=False)
 usedants = numpy.unique(maintab.getcol('ANTENNA1'))
 meanexp = round(numpy.mean(maintab.getcol('EXPOSURE')),2)
@@ -91,6 +96,8 @@ print ('     Project:                  '+   ''.join(proj))
 print ('     Beginning of Observation: '+str(st_time)+' (ISO) -- '+str(mjd)+' (MJD) ')
 print ('     Observation length:       '+str(length)+'s ('+strs(round((length/3600.0),2))+' h)')
 print ('     Mean integration time:    '+str(meanexp)+' s')
+print ('     Number of correlation     ')
+print ('     polarization products:    '+str(num_corr)+'')
 
 print ('')
 #gi('     '+myms+'/FIELD')
