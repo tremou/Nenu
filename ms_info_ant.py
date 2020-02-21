@@ -41,7 +41,6 @@ def rad2deg(xx):
 
 
 # Get the Measurement Set from the command line arguments
-#myms = sys.argv[1].rstrip('/')
 myms=args.MS_file.rstrip('/')
 fldtab = table(myms+'/FIELD',ack=False)
 # Get the NAME column
