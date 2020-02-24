@@ -1,4 +1,4 @@
-# Nenu
+# NenuMS
 Quick look plots for NenuFAR MSs: 
 
     ms_info_ant.py 
