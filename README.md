@@ -12,3 +12,11 @@ Example of output in terminal:
 Example of MiniArrays/Antennas position plot:
 ![Image description](https://github.com/tremou/Nenu/blob/master/NENUFAR_XST_20200209_155700_20200209_162900_3C48_TRACKING_XST__SB351.ms_plotant.png)
 
+
+    nenu_calibms.py
+  Performs the following steps in a list of MSs: 
+  - Flagging (auto-correlations with NDPPP and aoflagger in auto mode-no particular strategy) 
+  - Gain calibration using the Lofar LBA  A-team sources skymodel (NDPPP)
+  - Apply calibration (NDPPP)
+  - Quick image by concatenating the MSs (WSClean) 
+  
