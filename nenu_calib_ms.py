@@ -23,13 +23,13 @@ if 1 in steps:
 		syscall+= 'msout=. '
 		syscall+= 'steps=[preflagger] '
 		syscall+= 'preflagger.corrtype=auto ' 
-		print syscall
+		print (syscall)
 		os.system(syscall)
 
 if 2 in steps:
 	for myms in mslist:
 		syscall= 'aoflagger '+myms+' '
-		print syscall
+		print (syscall)
 		os.system(syscall)
 
 if 3 in steps:
@@ -43,7 +43,7 @@ if 3 in steps:
 		syscall+= 'gaincal.caltype=fulljones '
 		syscall+= 'gaincal.solint=10 '
 		syscall+= 'gaincal.nchan=0 '
-		print syscall
+		print (syscall)
 		os.system(syscall)
 
 if 4 in steps:
@@ -54,7 +54,7 @@ if 4 in steps:
 		syscall+= 'msin.datacolumn=DATA '
 		syscall+= 'steps=[applycal] '
 		syscall+= 'applycal.parmdb='+myms+'/instrument '
-		print syscall
+		print (syscall)
 		os.system(syscall)
 		
 if 5 in steps: 
@@ -79,5 +79,5 @@ if 5 in steps:
 	#syscall+= '-joinchannels '
 	syscall+= '-mem 90 '
 	syscall+= '*.MS_CAL'
-	print syscall 
+	print (syscall) 
 	os.system(syscall)
