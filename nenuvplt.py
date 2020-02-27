@@ -17,7 +17,7 @@ from astropy.time import Time
 from bokeh.plotting import figure, output_file, show
 import seaborn as sns; sns.set()
 import xarray as xr
-import pandas as
+import pandas as pd
 
 parser = argparse.ArgumentParser(description='Plot of UV coverage', epilog="Output:UV coverage plot (meters)", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("MS_file", help='input MeasurmentSet file')
