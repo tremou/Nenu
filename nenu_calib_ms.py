@@ -74,9 +74,9 @@ if 5 in steps:
 	syscall+= '-auto-threshold 0.3 '
 	syscall+= '-auto-mask 8.0 '
 	syscall+= '-name '+imgname+' '
-	syscall+= '-channelsout 8 '
-	syscall+= '-fit-spectral-pol 3 '
-	syscall+= '-joinchannels '
+	#syscall+= '-channelsout 5 '
+	#syscall+= '-fit-spectral-pol 3 '
+	#syscall+= '-joinchannels '
 	syscall+= '-mem 90 '
 	syscall+= '*.MS_CAL'
 	print syscall 
