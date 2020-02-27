@@ -85,7 +85,9 @@ for i in datasets:
 
 #UV distance
 uvdist = ((u**2.0)+(v**2.0))**0.5
-frame=i.to_dataframe()
+
+#convert the xarray into panda dataframe to prepare it for plotting ... 
+#frame=i.to_dataframe()
 #u and v in wavelengths:
 #for z in u:
         #uwav=z/wavel*len(u)
