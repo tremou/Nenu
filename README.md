@@ -25,4 +25,5 @@ Example of MiniArrays/Antennas position plot:
         nenuvplt.py
   Converting the MS into dask-ms xarray in order to do quick plots. 
   Not yet completed but you may use it for quick uv-plot. It has also many dependancies that I will eventually list here... 
-  
+  Example of uv-plot: 
+  ![Image description](https://github.com/tremou/Nenu/blob/master/uvplot.png)
