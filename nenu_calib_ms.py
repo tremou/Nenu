@@ -59,7 +59,6 @@ if 4 in steps:
 		
 if 5 in steps: 
 	if 5 in steps: 
-	syscall= 'wsclean '
 	imgname = 'sub_img_'+mslist[0]+'_data'
 	syscall = 'wsclean '
 	syscall+= '-size 1024 1024 '
