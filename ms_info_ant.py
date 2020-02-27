@@ -10,7 +10,6 @@ from astropy.coordinates import Angle
 from astropy import units as u
 from astropy.constants import c, R_earth
 from astropy import constants as const
-import cartopy.crs as ccrs
 from astropy.time import Time
 
 parser = argparse.ArgumentParser(description='Quick look at a Measurement Set, Plot of antenna positions, return the antenna positions in degrees (Lon, Lat)', epilog="Output:list info of MS and plot antenna positions, and return the antenna positions in degrees (Lon, Lat)", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
