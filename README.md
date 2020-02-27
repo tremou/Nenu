@@ -20,8 +20,8 @@ Example of MiniArrays/Antennas position plot:
   - Apply calibration (NDPPP)
   - Quick image by concatenating the MSs (WSClean) 
   
-
-    nenuvplt.py
+  
+        nenuvplt.py
   Converting the MS into dask-ms xarray in order to do quick plots. 
   Not yet completed buy you may use it for quick uv-plot. It has also many dependancies that I will eventually list here... 
   
