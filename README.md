@@ -20,12 +20,17 @@ Example of MiniArrays/Antennas position plot:
   - Apply calibration (NDPPP)
   - Quick image by concatenating the MSs (WSClean) 
   
-  
+        msplot.py
+  Reading the MS file and creat UV, Real vs Imag, Amp vs UVdist, Amp vs Time plots. 
+  Correlation index and antenna options to plot. 
+  Example of output file: 
+  ![Image description]()
+        
+        
         
         nenuvplt.py
   Converting the MS into dask-ms xarray in order to do quick plots. 
   Not yet completed but you may use it for quick uv-plot. It has also many dependancies that I will eventually list here... 
   
   
-  Example of uv-plot: 
-  ![Image description](https://github.com/tremou/Nenu/blob/master/uvplot.png)
+ 
