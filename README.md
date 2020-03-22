@@ -24,7 +24,7 @@ Example of MiniArrays/Antennas position plot:
   Reading the MS file and creat UV, Real vs Imag, Amp vs UVdist, Amp vs Time plots. 
   Correlation index and antenna options to plot. 
   Example of output file: 
-  ![Image description]()
+  ![Image description](https://github.com/tremou/Nenu/blob/master/NENUFAR_XST_20200310_110200_20200310_150400_3C10_TRACKING_XST__SB282.ms_plot.png)
         
         
         
