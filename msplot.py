@@ -88,11 +88,12 @@ phase = numpy.angle(data[:,:,corr])#rads
 amp = numpy.abs(data[:,:,corr])
 real = numpy.real(data[:,:,corr])
 imag = numpy.imag(data[:,:,corr])
-corrdata = maintab.getcol('CORRECTED_DATA')
-phase_corr = numpy.angle(corrdata[:,:,corr])#rads
-amp_corr = numpy.abs(corrdata[:,:,corr])
-real_corr = numpy.real(corrdata[:,:,corr])
-imag_corr = numpy.imag(corrdata[:,:,corr])
+if datacol=='corrdata': 
+	corrdata = maintab.getcol('CORRECTED_DATA')
+	phase_corr = numpy.angle(corrdata[:,:,corr])#rads
+	amp_corr = numpy.abs(corrdata[:,:,corr])
+	real_corr = numpy.real(corrdata[:,:,corr])
+	imag_corr = numpy.imag(corrdata[:,:,corr])
 times = maintab.getcol('TIME')
 t0 = times[0]
 t1 = times[-1]
