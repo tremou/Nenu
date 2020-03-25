@@ -11,7 +11,7 @@ from astropy import units as u
 from astropy.constants import c, R_earth
 from astropy import constants as const
 from astropy.time import Time
-import seaborn as sns; sns.set()
+#import seaborn as sns; sns.set()
 
 parser = argparse.ArgumentParser(description='Quick plots of MSs', epilog="Output:plots", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("MS_file", help='input MeasurmentSet file')
