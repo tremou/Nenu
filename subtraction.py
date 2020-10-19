@@ -8,9 +8,9 @@ mslist = glob.glob('*.ms')
 
 
 #available_steps=[source subtraction]
-steps= [1]
+steps= [source_sub]
 
-if 1 in steps: 
+if source_sub in steps: 
 	for myms in mslist:
 		syscall= 'NDPPP ' 
 		syscall+= 'msin='+myms+' '
