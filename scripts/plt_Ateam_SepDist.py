@@ -1,8 +1,11 @@
+#!/usr/bin/python
+#evangelia.tremou@obspm.fr
+
 #It plots the altitude and the sepration distance between A-team sources and the phase center of the observations (pointing). 
 #Edit the config.toml to set the desired pointing, time of the desired observing run and the telescope location if used other than nenuFAR. 
 #The script is similar to https://github.com/lofar-astron/LOFAR-Contributions/blob/master/Maintained/plot_Ateam_elevation.py which is reading the above information from an MS file. 
 #The difference is that the current script could be used before the observations in order to avoid certain proximity of an A-team source. This can help avoiding the heavy computing demixing-process (https://support.astron.nl/LOFARImagingCookbook/tutorial.html#flagging-and-demixing) 
-#!/usr/bin/python
+
 import matplotlib.pyplot as plt
 import numpy
 from matplotlib import dates
