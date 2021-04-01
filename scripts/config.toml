@@ -1,0 +1,52 @@
+[POINTING]
+name = "Target"
+RA = "19h32m18s"
+DEC = "+10d56m6s"
+frame='icrs'
+
+[TIME]
+start_time = '2021-03-26 06:00:00.0'#UTC
+end_time = '2021-03-26 10:00:00.0'#UTC
+
+[TELESCOPE]
+name = 'NenuFAR'
+latitude = '47.376511' #u.deg
+longtitude = '2.192400'#u.deg
+elevation= '150'#u.m
+
+#A-TEAM SOURCES
+[CasA]
+name = "CasA"
+RA = "23h23m27.94s"
+DEC = "+58d48m42.400s"
+frame='icrs'
+
+[CygA]
+name = "CygA"
+RA = "19h59m28.35s"
+DEC = "+40d44m02.1s"
+frame='icrs'
+
+[TauA]
+name = "TauA"
+RA = "05h34m31.97s"
+DEC = "+22d00m52.1s"
+frame='icrs'
+
+[HerA]
+name = "HerA"
+RA = "16h51m08.024s"
+DEC = "+04d59m34.91s"
+frame='icrs'
+
+[VirA]
+name = "VirA"
+RA = "12h30m49.42s"
+DEC = "+12d23m29.0s"
+frame='icrs'
+
+[HydraA]
+name = "HydraA"
+RA = "09h18m05.651s"
+DEC = "-12d05m43.99s"
+frame='icrs'
