@@ -4,6 +4,7 @@ import os
 import numpy
 import math
 from casacore.tables import *
+from MSUtils.msutils import STOKES_TYPES
 import argparse
 import matplotlib.pyplot as plt
 from astropy.coordinates import Angle
@@ -70,6 +71,7 @@ anttab.done()
 
 poltab = table(myms+'/POLARIZATION',ack=False)
 num_corr = poltab.getcol('NUM_CORR')
+corr_labels = [STOKES_TYPES[corr] for corr in poltab.getcol('CORR_TYPE', 0, 1).ravel()]
 poltab.done()
 
 
@@ -94,8 +96,9 @@ print ('     Project:                  '+   ''.join(proj))
 print ('     Beginning of Observation: '+str(st_time)+' (ISO) -- '+str(mjd)+' (MJD) ')
 print ('     Observation length:       '+str(length)+'s ('+str(round((length/3600.0),2))+' h)')
 print ('     Mean integration time:    '+str(meanexp)+' s')
-print ('     Number of correlation     ')
-print ('     polarization products:    '+str(num_corr)+'')
+#print ('     Number of correlation     ')
+#print ('     polarization products:    '+str(num_corr)+'')
+print ('     Correlation products:    '+str(list(corr_labels)))
 
 print ('')
 #gi('     '+myms+'/FIELD')
