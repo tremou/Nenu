@@ -13,11 +13,24 @@ from astropy.constants import c, R_earth
 from astropy import constants as const
 from astropy.time import Time
 
+def str2bool(v):
+    if isinstance(v, bool):
+       return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+	
 parser = argparse.ArgumentParser(description='Quick look at a Measurement Set, Plot of antenna positions, return the antenna positions in degrees (Lon, Lat)', epilog="Output:list info of MS and plot antenna positions, and return the antenna positions in degrees (Lon, Lat)", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument("MS_file", help='input MeasurmentSet file')
-
+parser.add_argument('-antplot', "--antplot", type=str2bool, nargs='?',
+                        const=True, default=False,
+                        help="Print & plot antenna location.")
 args = parser.parse_args()
 parser.print_help()
+antplot=args.antplot
 
 # Disable
 def blockPrint():
@@ -136,16 +149,15 @@ y = antpos[:,0]
 z = antpos[:,2]
 R = 6378100 #earth-radius
 
-print (' '*2, 'ANTENNA NAME' +' '*8+ 'LONG (DEG)' + ' '*10+ 'LAT (DEG)')
-
-plt.plot(x, y, '1', markersize=25)
-#ax = plt.axes(projection=ccrs.PlateCarree())
-plt.ticklabel_format(useOffset=False, style='plain')
-plt.xlabel('X (meters)', fontsize = 20)
-plt.ylabel('Y (meters)', fontsize = 20)
-plt.tick_params(axis ='both',which='both',direction = 'in',labelsize=16)
-plt.title(myms,fontsize = 10)
-for i, txt in enumerate(antnames):
+if antplot==True:
+    print (' '*2, 'ANTENNA NAME' +' '*8+ 'LONG (DEG)' + ' '*10+ 'LAT (DEG)')
+    plt.plot(x, y, '1', markersize=25)
+    plt.ticklabel_format(useOffset=False, style='plain')
+    plt.xlabel('X (meters)', fontsize = 20)
+    plt.ylabel('Y (meters)', fontsize = 20)
+    plt.tick_params(axis ='both',which='both',direction = 'in',labelsize=16)
+    plt.title(myms,fontsize = 10)
+    for i, txt in enumerate(antnames):
         plt.annotate(txt, (x[i]+5, y[i]+5), ha='center', color='black', fontsize='8')
         lat = math.asin(z[i] / R)
         lon = math.atan2(x[i], y[i])
