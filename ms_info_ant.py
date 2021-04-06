@@ -156,5 +156,5 @@ for i, txt in enumerate(antnames):
         #plt.plot(lon_deg, lat_deg, marker='1',markersize=25, transform=ccrs.Geodetic())
 
 
-plt.show()
-#plt.savefig(myms+'_plotant.png')
+#plt.show()
+plt.savefig(myms+'_plotant.png')
